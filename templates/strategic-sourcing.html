@@ -1,4 +1,112 @@
 {% extends 'base.html' %}
 {% set title='Strategic Sourcing' %}
-{% block page_css %}<link rel="stylesheet" type="text/css" href="/strategic_sourcing.css" />{% endblock %}
 {% set eyecandy='eyecandy2.jpg' %}
+{% block page_style %}
+.details {
+border-right:1px solid lightgray;
+padding-left:10px;
+padding-right:10px;
+}
+
+#details_last {
+border-right:none;
+}
+{% endblock %}
+{% block page_content %}
+  <section id=introduction class=description>
+    <p>Strike Group is a leading provider of advanced electrical supplies logistics engineering, and security systems, and war fighter solutions for the federal government, state and local agencies and commercial applications. We leverage our intellectual and technical strengths to provide our customers with leading edge professional services and mission success.</p>
+  </section>
+
+  <section id=titles class=columngroup>
+    <div class=fourcolumn>
+      <h4>ELECTRICAL LINE CARD</h4>
+    </div>
+    <div class=fourcolumn>
+      <h4>MASONRY LINE CARD</h4>
+    </div>
+    <div class=fourcolumn>
+      <h4>RESTAURANT SUPPLIES/PRODUCTS</h4>
+    </div>
+    <div class=fourcolumn>
+      <h4>BUILDING SUPPLIES</h4>
+    </div>
+  </section>
+
+  <section id=images class=columngroup>
+    <div class=fourcolumn>
+      <figure class=centered>
+        <img src="strategic_sourcing_1.jpg" />
+      </figure>
+    </div>
+    <div class=fourcolumn>
+      <figure class=centered>
+        <img src="strategic_sourcing_2.jpg" />
+      </figure>
+    </div>
+    <div class=fourcolumn>
+      <figure class=centered>
+        <img src="strategic_sourcing_3.jpg" />
+      </figure>
+    </div>
+    <div class=fourcolumn>
+      <figure class=centered>
+        <img src="strategic_sourcing_4.jpg" />
+      </figure>
+    </div>
+  </section>
+
+  <section id=separators class=columngroup>
+    <div class=fourcolumn>
+      <hr />
+    </div>
+    <div class=fourcolumn>
+      <hr />
+    </div>
+    <div class=fourcolumn>
+      <hr />
+    </div>
+    <div class=fourcolumn>
+      <hr />
+    </div>
+  </section>
+
+  <section id=links class=columntable'>
+    <div class='fourcolumncell details'>
+      <h5>Fuses</h5>
+      <ul class=linklist>
+        <li><a href="http://www.bussmann.com/">Bussman</a></li>
+        <li><a href="http://www.littelfuse.com/">Litelfuse</a></li>
+      </ul>
+      <h5>Lamps</h5>
+      <ul class=linklist>
+        <li><a href="http://www.gelighting.com/na/">GE Lamps</a></li>
+      </ul>
+      <h5>Lighting & Fixtures</h5>
+      <ul class=linklist>
+        <li><a href="http://www.columbialighting.com/">Columbia</a></li>
+        <li><a href="http://www.cooperlighting.com/">Cooper Ligting</a></li>
+        <li><a href="http://www.crouse-hinds.com/">Crouse-Hinds</a></li>
+        <li><a href="http://www.dual-lite.com/">Dual Lite</a></li>
+        <li><a href="https://secure.ge-lightingsystems.com/gels01/r2/productcentral/htmls/home.html">GE Lighting Systems</a></li>
+        <li><a href="http://www.hubbelllighting.com/">Hubbell</a></li>
+      </ul>
+      <h3><a href="/sourcing-electrical">::READ MORE::</a></h3>
+    </div>
+    <div class='fourcolumncell details'>
+      <h5>Prominent Professionals</h5>
+      <br />
+      <p>The Strike Group has partnered with MasonPro to provide Masonry Specialty Materials and Supplies. <a href="http://www.masonpro.com">www.masonpro.com</a></p>
+    </div>
+    <div class='fourcolumncell details'>
+      <h5>Excellent Service</h5>
+      <br />
+      <p>The Strike Group has teamed with MANS Lumber Millwork to provide building supplies to major projects. <a href="http://www.namans.com">www.namans.com</a></p>
+    </div>
+    <div id=details_last class='fourcolumncell details'>
+      <h5>Unlimited Opportunities</h5>
+      <br />
+      <p>The Strike Group has a team arrangement with Gold Star products to supply Restaurants with quality products. <a href="http://www.goldstarproducts.com">www.goldstarproducts.com</a></p>
+      <p>The Strike Group has provide quality services for Yum Brands, MGM Casino (Detroit) & the Luxor Hotel.</p>
+    </div>
+  </section>
+{% endblock %}

@@ -1,4 +1,19 @@
 {% extends 'base.html' %}
 {% set title='About Us' %}
-{% block page_css %}<link rel="stylesheet" type="text/css" href="/about_us.css" />{% endblock %}
 {% set eyecandy='eyecandy1.jpg' %}
+{% block page_content %}
+<section id=main class=columngroup>
+  <h2>Welcome</h2>
+  <hr />
+  <section id=description class=twocolumn style="width:66%;">
+    <p>The Strike Group is a global leader in commodity sourcing, logistics and warehousing solutions. Strike Group was created in 1998 and is certified through the following agencies, Michigan Minority Business Development Council as a minority company, Department of Transportation as a Disadvantage Business Enterprise, Federal 8a Small Disadvantage Business, Veteran Owned Small Business and HUBzone. We are committed to utilize our past and present partnerships to build a successful track record with such companies as: Yum Brands, Nevada Department of Transportation Chemico Systems, Northwest Airline, MGM Casino, Department of Defense, Department of Energy and Veterans Administration.</p>
+    <p>Our mission is to provide customers with cost-effective, high-quality products and rapid product delivery. We have an extensive global network of suppliers delivering a wide range of products for our customers' special needs and priorities. By using our global list of suppliers, we find the finest suppliers and products tailored to individual customer demands. We develop creative solutions for difficult problems and challenges. We can find any product with excellent value, service and delivery.</p>
+    <h3><a href="/certifications">Strike Group Certifications</a></h3>
+  </section>
+  <section id=image class=twocolumn style="width:33%">
+    <figure>
+      <img src="index_1.jpg" alt="stock photo" />
+    </figure>
+  </section>
+</section>
+{% endblock %}

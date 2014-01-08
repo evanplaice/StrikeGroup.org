@@ -1,14 +1,3 @@
-
-{#
-{% set nav = (
-    {'url':'index', 'name':'About Us', 'width':'126px', 'offset':'0px'},
-    {'url':'strategic-sourcing', 'name':'Strategic Sourcing', 'width':'160px', 'offset':'-126px'},
-    {'url':'government-projects', 'name':'Government Projects', 'width':'171px', 'offset':'-286px'},
-    {'url':'commercial-projects', 'name':'Commercial Projects', 'width':'171px', 'offset':'-457px'},
-    {'url':'information-technology', 'name':'Information Technology', 'width':'183px', 'offset':'-628px'},
-    {'url':'locations', 'name':'Locations', 'width':'149px', 'offset':'-811px'}
-) -%}
-#}
 <!DOCTYPE html>
 <html>
 
@@ -18,36 +7,41 @@
   <meta name="keywords" content="{{ keywords|join(', ') }}" />
   <meta name="author" content="Evan Plaice" />
   <meta charset="utf-8">
-  <link rel="stylesheet" type="text/css" href="/reset.css" />
-  <link rel="stylesheet" type="text/css" href="/base.css" />
-  {% block page_css %}{% endblock %}
-  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <link rel="stylesheet" href="/reset.css" />
+  <link rel="stylesheet" href="/base.css" />
+  {%- block page_css %}{% endblock -%}
+  {%- block plugin_css %}{% endblock -%}
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-  <script>!window.jQuery && document.write('<script src="jquery-1.7.min.js"><\/script>')</script>
+<!--[if lt IE 9]>
+<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+  {%- block plugin_js %}{% endblock -%}
+  <style>
+  {%- block page_style %}{% endblock -%}
+  </style>
 </head>
 
 <body id=body>
 
 <header id=header>
-  <figure id=logo>
-    <img src='logo.jpg' alt='Strike Group Logo'>
-  </figure>
+  <div id=logo>
+    <img src='logo.png' alt='Strike Group Logo' width="220" height="100" />
+  </div>
   <nav id=nav>
-    <ul>
     {% for link in nav -%}
-    <li><a id='{{ link.url }}' href='{{ link.url }}'><img id=nav_button src='transparent.png' /></a></li>
+    <div><a id='{{ link.url }}' href='{{ link.url }}'><img class=nav_button src='transparent.png' alt="{{ link.name}}" /></a></div>
+    <!--<li id='{{ link.url }}' class='nav_button'><a href='{{ link.url }}'>{{ link.name }}</a></li>-->
     {% endfor -%}
-    </ul>
   </nav>
-  <figure id=eyecandy>
+  <div id=eyecandy>
     <img src={{ eyecandy }} alt='eyecandy' />
-  </figure>
+  </div>
 </header>
 
-<section id=content>
-{% block content %}{% endblock %}
-<h2>This is the body</h2>
-<p>Insert some content here</p>
+<section id=content class=clearfix>
+<!-- page_content template -->
+{%- block page_content %}{% endblock -%}
+<!-- end template -->
 </section>
 
 <footer id=footer>

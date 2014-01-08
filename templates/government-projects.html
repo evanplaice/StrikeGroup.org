@@ -1,4 +1,100 @@
 {% extends 'base.html' %}
 {% set title='Government Projects' %}
-{% block page_css %}<link rel="stylesheet" type="text/css" href="/government_projects.css" />{% endblock %}
 {% set eyecandy='eyecandy3.jpg' %}
+{% block page_script %}
+{% endblock %}
+{% block page_style %}
+.details {
+border-right:1px solid lightgray;
+padding-left:10px;
+padding-right:10px;
+}
+
+#details_last {
+border-right:none;
+}
+
+.fourcolumncelltriple {
+display: table-cell;
+width: 75%;
+}
+{% endblock %}
+{% block page_content %}
+  <section id=titles class=columngroup>
+    <header class=fourcolumn>
+      <h4>MARINE CORPS</h4>
+    </header>
+    <header class=fourcolumn>
+      <h4>DEPARTMENT OF TRANSPORTATION</h4>
+    </header>
+    <header class=fourcolumn>
+      <h4>DEPARTMENT OF ENERGY</h4>
+    </header>
+    <header class=fourcolumn>
+      <h4>VETERAN ADMINISTRATION</h4>
+    </header>
+  </section>
+
+  <section id=images class=columngroup>
+    <div class=fourcolumn>
+      <figure class=centered>
+        <img src="government_projects_1.jpg" />
+      </figure>
+    </div>
+    <div class=fourcolumn>
+      <figure class=centered>
+        <img src="government_projects_2.jpg" />
+      </figure>
+    </div>
+    <div class=fourcolumn>
+      <figure class=centered>
+        <img src="government_projects_3.jpg" />
+      </figure>
+    </div>
+    <div class=fourcolumn>
+      <figure class=centered>
+        <img src="government_projects_4.jpg" />
+      </figure>
+    </div>
+  </section>
+
+  <section id=separators class=columngroup>
+    <div class=fourcolumn>
+      <hr />
+    </div>
+    <div class=fourcolumn>
+      <hr />
+    </div>
+    <div class=fourcolumn>
+      <hr />
+    </div>
+    <div class=fourcolumn>
+      <hr />
+    </div>
+  </section>
+
+  <section id=links class='fourcolumntable'>
+    <div class='fourcolumncell details'>
+      <h5>Around the World Logistics</h5>
+      <br />
+      <p>The ARD Logistics and Strike Group Team are committed to provide support so Combat Camera and Public Affairs can acquire, manipulate, reproduce, design, develop, archive, retrieve and manage imagery and media acquire in forward-deployed locations throughout the world.</p>
+      <h3><a href="/usmc">::READ MORE::</a></h3>
+    </div>
+    <div id=details_last class='fourcolumncelltriple details'>
+      <p>Strike Group has worked on various project for the federal government prime contract to the Department of Defense as well as the Department of Enegery.</p>
+      <p>Listed are some examples of our federal projects:</p>
+      <ul class=list>
+        <li>Dirksen Federal Bld (Chicago IL)</li>
+        <li>Louis Stokes VA Hospital ( Cleveland OH)</li>
+        <li>Marine Corps Combat Camera Division (Quantico VA)</li>
+        <li>Detroit Metro Airport (Detroit, MI)</li>
+        <li>Boulder Hwy Renovation ( Las Vegas, NV)</li>
+        <li>Department of Energy ( New Orleans, LA)</li>
+        <li>Amtrak Fiber Optics Project (Indiana , IN)</li>
+        <li>Chicago Transit Authority (Chicago IL)</li>
+        <li>Certified with the Georgia DOT</li>
+      </ul>
+      <h3><a href="/certifications.html">Strike Group Certifications</a></h3>
+    </div>
+  </section>
+{% endblock %}

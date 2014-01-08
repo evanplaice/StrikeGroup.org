@@ -19,19 +19,21 @@ main = [
   Route('/locations',               StaticHandler, defaults={'_uri':'locations.html'}),
   Route('/certifications',          StaticHandler, defaults={'_uri':'certifications.html'}),
   Route('/sourcing-electrical',     StaticHandler, defaults={'_uri':'sourcing-electrical.html'}),
-  Route('/usmc-combat-camera',      StaticHandler, defaults={'_uri':'usmc-combat-camera.html'})]
+  Route('/usmc',      StaticHandler, defaults={'_uri':'usmc.html'})]
 
 auth = [
-  Route('/usmc/',       AuthHandler),
-  Route('/usmc/<_uri>', AuthHandler)]
+  Route('/private/',       AuthHandler),
+  Route('/private/<_uri>', AuthHandler)]
 
 redirects = [
-  Route('/strategic.html',  RedirectHandler, defaults={'_uri':'strategic-sourcing'}),
-  Route('/government.html', RedirectHandler, defaults={'_uri':'government-projects'}),
-  Route('/commercial.html', RedirectHandler, defaults={'_uri':'commercial-projects'}),
-  Route('/it.html',         RedirectHandler, defaults={'_uri':'information-technology'}),
-  Route('/location.html',   RedirectHandler, defaults={'_uri':'locations'}),
-  Route('/electrical.html', RedirectHandler, defaults={'_uri':'sourcing-electrical'}),
-  Route('/comcam.html',     RedirectHandler, defaults={'_uri':'usmc-combat-camera'})]
+  Route('/index.html',          RedirectHandler,  defaults={'_uri':'/'}),
+  Route('/strategic.html',      RedirectHandler,  defaults={'_uri':'strategic-sourcing'}),
+  Route('/Government.html',     RedirectHandler,  defaults={'_uri':'government-projects'}),
+  Route('/commercial.html',     RedirectHandler,  defaults={'_uri':'commercial-projects'}),
+  Route('/it.html',             RedirectHandler,  defaults={'_uri':'information-technology'}),
+  Route('/location.html',       RedirectHandler,  defaults={'_uri':'locations'}),
+  Route('/certifications.html', RedirectHandler,  defaults={'_uri':'certifications'}),
+  Route('/electrical.html',     RedirectHandler,  defaults={'_uri':'sourcing-electrical'}),
+  Route('/comcam.html',         RedirectHandler,  defaults={'_uri':'usmc'})]
 
 master = main + auth + redirects

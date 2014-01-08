@@ -1,4 +1,36 @@
 {% extends 'base.html' %}
 {% set title='Information Technology' %}
-{% block page_css %}<link rel="stylesheet" type="text/css" href="/information_technology.css" />{% endblock %}
 {% set eyecandy='eyecandy5.jpg' %}
+{% block page_style %}
+#details p {
+margin-left:10px;
+margin-right:10px;
+}
+{% endblock %}
+{% block page_content %}
+<section id=introduction class=columngroup>
+  <section id=description class=twocolumn>
+    <p>Strike Group has a teamed with <a href="http://www.synch-solutions.com/">Synch-Solutions</a> a leading management consulting and technology services firm, distinguished by our commitment to delivering enterprise transformation solutions. While we provide a wide variety of services for our clients, our core offerings have been strategically selected to cover areas required to create significant and lasting enterprise change.
+  </section>
+  <div id=image class=twocolumn>
+    <figure class=centered>
+      <img src="information_technology_1.jpg" />
+    </figure>
+  </div>
+</section>
+
+<section id=details>
+  <h5>Managed Services</h5>
+  <p>Managed Services offered by Synch-Solutions bring efficiencies to any size organization by providing any level of IT support the client sees fit. Our service levels run the gamut from basic, remote IT monitoring to complex, fully managed services. By engaging Synch-Solutions as a partner to manage commodity services, the client organization can better focus on its core mission, and can leverage the cost reductions and improved service levels achieved through the economies of scale that we bring to bear.</p>
+  <h5>ERP Solution Enterprise Resource Planning</h5>
+  <p>Enterprise Resource Planning solutions automage, standardize and integrate processes, enabling cost-saving efficiencies and informed decisions. The Sync-Solutions Polaris Methodology, which is aligned with the Project Management Institute's Project Management Body of Knowledge (PMBOK&reg;) Guide, includes predefined tools and templates that deliver cost-saving effenciencies, shorten implementation/upgrade imte, and ensure success.</p>
+  <h5>Business Intelligence (BI) and Data Warehousing (DW)</h5>
+  <p>Business Intelligence and Data Warehousing solutions enable a holistic view of information by consolidating data from various independent systems into a highly scalable and flexible Data Warehousing architecture. Our experts configure off-the-shelf Business Intelligence systems to present consolidated data in multi-dimensional, real-time and actionable scorecards and dashboards.</p>
+  <h5>SharePoint Solutions</h5>
+  <p>The Extended Team Approach (ETA) is a flexible approach to application development, from a single placement all the way out to a fully capable Offshore team.</p>
+  <h5>Scalable Teams Ready</h5>
+  <p>Let our SharePoint consultants show you how to take your business to the next level with this groundbreaking portal software.</p>
+  <h5>Custom Application Development</h5>
+  <p>Our Application Development services will maximize the return on your sourcing investment by offering you the right solutions.</p>
+</section>
+{% endblock %}

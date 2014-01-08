@@ -1,5 +1,5 @@
 application: strikegrouptest
-version: 1
+version: 2
 runtime: python27
 api_version: 1
 threadsafe: yes
@@ -40,7 +40,7 @@ handlers:
 
 - url: /(.*\.(mp3|mp4|ogv|ogg|webm|swf))
   static_files: static/media/\1
-  upload: static/media/(.*\.swf)
+  upload: static/media/(.*\.(mp3|mp4|ogv|ogg|webm|swf))
 
 #- url: /admin
 # script: app.main.application

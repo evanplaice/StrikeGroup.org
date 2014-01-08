@@ -1,34 +1,84 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-  <title>{{ title }} - Strike Group</title>
-  <meta name="description" content="{{ description }}" />
-  <meta name="keywords" content="{{ keywords|join(', ') }}" />
-  <meta name="author" content="Evan Plaice" />
-  <meta charset="utf-8">
-  <link rel="stylesheet" type="text/css" href="/reset.css" />
-  <link rel="stylesheet" type="text/css" href="/base.css" />
-  {% block page_css %}{% endblock %}
-  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-  <script>!window.jQuery && document.write('<script src="jquery-1.7.min.js"><\/script>')</script>
-</head>
-
-<body id=body>
-
-<header id=header>
-
-</header>
-
-<section id=content>
-
+{% extends 'base.html' %}
+{% set title='USMC Combat Camera' %}
+{% set eyecandy='eyecandy7.jpg' %}
+{% block page_content %}
+<section id=general class=columngroup>
+  <section id=leftcolumn class="twocolumn description" style="width:55%;">
+    <h4>Team Effort to Support Marine Corps combat Camera and Public Affairs Systems Woldwide.</h4>
+    <hr />
+    <p>The Strike Group <a href="http://www.ardlogistics.com/ardgbu/">ARD Logistics</a> Partnership Provides; Logistics, Serialized Inventory Management, Trend Analysis, Warranty Repair Support, Preventive Maintenance, Intermediate Training, New Equipment Training, Document Control and Customer Service Support to Marine Corps Systems Command, 1st, 2nd 3rd, and 4th Marine Divisions (MARDIV), I, II, III Marine Expeditionary Forces (MEF), Marine Logistics Groups (MLG), I, II, III, and Marine Corps Forces Pacific (MARFORPAC) and Reserve (MARFORRESS).</p>
+    <p>Support will include preventive and corrective maintenance, replacement, spares management, web based serialized inventory and repair request management, tracking deliveries, and customer support for Combat Camera.</p>
+    <p>Combat Camera (COMCAM) and Public Affairs (PA) applications. This includes a full range of services for East Coast, West Coast and Overseas Locations.</p>
+    <hr />
+    <h4>Combat Camera (COMCAM)/Public Affairs (PA) Camera Systems</h4>
+    <p>Marine Corps Systems Command Code PG12 procures and issues state-of-the-art still/video Camera Systems to each major subordinate command and designated COMCAM/PA Units world-wide in support of the Global War On Terror.</p>
+    <p>COMCAM/PA Camera Systems are used to acquire digital imagery of important real world operations, and essential training conducted by the United States Marine Corps and Joint Forces. Imagery acquired by COMCAM/PA is used by Marine Corps, Joint Forces, Department of Defense and is archived in DoD and Marine Corps repositories for extensive operational and historical use.</p>
+    <h4>Strike Group/ARD Logistics Support</h4>
+    <ul class=list>
+      <li>Provide Life Cycle Management of COMCAM/PA Camera Systems</li>
+      <li>Provide New Equipment and Preventive Maintenance Training</li>
+      <li>Provide Remedial Combat Camera Systems Training</li>
+      <li>Provide Equipment Trends Analysis</li>
+      <li>Provide Spares Management</li>
+      <li>Provide Preventive Maintenance</li>
+      <li>Provide Web Based Inventory, Warranty Repair Work Order Requests, and Shipment Tracking</li>
+    </ul>
+    <figure class=centered>
+      <img src="usmc_3.jpg" />
+    </figure>
+  </section>
+  <section id=rightcolumn class=twocolumn style="width:40%;">
+    <figure class=centered>
+    <br />
+      <img src="usmc_1.jpg" />
+      <img src="usmc_2.jpg" style="border:none;" />
+    </figure>
+  </section>
 </section>
-
-<footer id=footer>
-
-</footer>
-
-</body>
-
-</html>
+<hr />
+<section id="afghanistan">
+  <img src="usmc_4.jpg" />
+  <figure class=centered style="width:554px;">
+    <img src="usmc_5.jpg" />
+    <figcaption>Photo of one of three Tactical Imagery Production System (TIPS) in Camp Leatherneck</figcaption>
+  </figure>
+  <br />
+  <p class=description>Strike Group team was awarded a four year contract by the United States Marine Corps to provide sustainment logistics support for three Tactical Imagery Production Systems (TIPS) in Afghanistan. Five Field Service Support Representatives (FSRs) were sent to Afghanistan to provide full-time technical support, training, preventive maintenance, equipment accountability, warranty management and repair of all equipment utilized by Combat Camera personnel. TIPS systems are typically integrated with various types of Xerox production printers and multimedia equipment to perform support video production and editing, photographic and graphic arts capabilities. The contract also includes the sustainment and management of Marine Corps Systems Command Combat Camera equipment used by personnel in the Afghanistan theater.</p>
+  <div class="columngroup" style="margin-bottom:10px;">
+    <div class=threecolumn>
+      <figure class=centered>
+        <img src="usmc_6.jpg" />
+      </figure>
+    </div>
+    <div class=threecolumn>
+      <figure class=centered>
+        <img src="usmc_7.jpg" />
+        <br />
+        <p>The Strike Group team boasts a close relationship with Xerox in working together to ensure Combat Camera units are provided with the best support available to maintain the printing operations in Afghanistan. Close interaction and via conference calls are routine and essential.</p>
+      </figure>
+    </div>
+    <div class=threecolumn>
+      <figure class=centered>
+        <img src="usmc_8.jpg" />
+      </figure>
+    </div>
+  </div>
+  <div class="columngroup">
+    <div class=threecolumn>
+      <figure class=centered>
+        <img src="usmc_9.jpg" />
+      </figure>
+    </div>
+    <div class=threecolumn>
+      <figure class=centered>
+        <img src="usmc_10.jpg" />
+      </figure>
+    </div>
+    <div class=threecolumn>
+      <figure class=centered>
+        <img src="usmc_11.jpg" />
+      </figure>
+    </div>
+  </div>
+</section>
+{% endblock %}

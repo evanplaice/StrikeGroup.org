@@ -1,4 +1,42 @@
 {% extends 'base.html' %}
 {% set title='Commercial Projects' %}
-{% block page_css %}<link rel="stylesheet" type="text/css" href="/commercial_projects.css" />{% endblock %}
+{% block plugin_css %}<link rel="stylesheet" type="text/css" href="/slideshow.css" />{% endblock %}
 {% set eyecandy='eyecandy4.jpg' %}
+{% block page_style %}
+#listing {
+margin-top:20px;
+}
+
+#slideshow {
+margin-top:-20px;
+overflow:hidden;
+}
+{% endblock%}
+{% block page_content %}
+<section id=main class=columngroup>
+  <section id=listing class=twocolumn>
+    <h5>Strike Group has worked on various commercial projects to include:</h5>
+    <br />
+    <ul class=list>
+      <li>Henry Ford Hospital - Detroit, MI</li>
+      <li>Ford Motor Company - Detroit, MI</li>
+      <li>Bombardier Mass Transit - Plattsburg, NY</li>
+      <li>Wayne State University - Detroit, MI</li>
+      <li>Boingo Wireless inc. - Chicago, IL</li>
+      <li>Gardenview Estates - Detroit, MI</li>
+      <li>MGM Casino - Las Vegas, NV & Detroit, MI</li>
+      <li>Greektown Casino - Detroit, MI</li>
+      <li>Otis Elevators - Las Vegas, NV</li>
+      <li>City Center Casino - Las Vegas, NV</li>
+      <li>Rosa Parks Bus Terminal - Detroit, MI</li>
+      <li>Gateway Bridge Project - Detroit, MI</li>
+      <li>St Joseph Hospital</li>
+    </ul>
+  </section>
+  <section id=slideshow class=twocolumn>
+      <object id="shockwaveslideshow" data="projects.swf" width="405px" height="405px" type="application/x-shockwave-flash">
+        <param name="movie" value="projects.swf" />
+      </object>
+  </section>
+</section>
+{% endblock %}

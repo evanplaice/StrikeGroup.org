@@ -1,4 +1,68 @@
 {% extends 'base.html' %}
 {% set title='Locations' %}
-{% block page_css %}<link rel="stylesheet" type="text/css" href="/locations.css" />{% endblock %}
 {% set eyecandy='eyecandy6.jpg' %}
+{% block page_style %}
+#locations {
+margin-bottom:10px;
+}
+#listings {
+width:33%;
+}
+#map {
+width:66%;
+}
+#map img {
+width:527px;
+height:318px;
+border:none;
+}
+#contacts {
+width:50%;
+margin:0 auto;
+}
+#contacts div {
+width:50%;
+}
+
+{% endblock %}
+{% block page_content %}
+<section id=locations class=clearfix>
+  <section id=listings class=twocolumn>
+    <h2>Office Locations</h2>
+    <hr />
+    <ul class=list>
+      <li>Detroit, MI - <i>Corporate Headquarters</i></li>
+      <li>Chicago, IL</li>
+      <li>Indianapolis, IN</li>
+      <li>Las Vegas, NV</li>
+      <li>St Louis, MO</li>
+      <li>Woodbridge, VA</li>
+      <li>Plattsburgh, NY</li>
+      <li>Duluth, GA</li>
+      <li>Camp Lejeune, NC</li>
+      <li>Camp Pendleton, CA</li>
+      <li>Camp Foster, Okinawa Japan</li>
+    <ul>
+  </section>
+  <div id=map class=twocolumn>
+    <figure class=centered>
+      <img src="locations_1.jpg" />
+    </figure>
+  </div>
+</section>
+<hr />
+<section id=contacts class=clearfix>
+  <div class=twocolumn>
+    <h2>Headquaters</h2>
+    18800 Fairway Drive Suite 10<br />
+    Detroit, MI 48221<br />
+    313.586.0003<br />
+    <a href="mailto:Lanec@strikegroup.org">Lanec@strikegroup.org</a>
+  </div>
+  <div class=twocolumn>
+    <h2>Mailing Address</h2>
+    PO Box 21954<br />
+    Detroit, Mi 48221
+  </div>
+</section>
+{% endblock %}

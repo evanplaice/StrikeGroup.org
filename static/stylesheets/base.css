@@ -1,8 +1,36 @@
 /* layout.css */
+body {
+font-family:Arial, Helvetica, sans-serif;
+font-size:small;
+}
+h2 {
+font-size:medium;
+}
+
+h3 {
+font-weight:bold;
+color:maroon;
+}
+
+h4 {
+font-weight:bold;
+color:maroon;
+margin-left:15px;
+margin-right:15px;
+margin-bottom:15px;
+}
+
+h5 {
+font-weight:bold;
+}
+
+p {
+margin-bottom:15px;
+}
 
 a {
-text-decoration:none;
 color:maroon;
+text-decoration:underline;
 }
 
 a:visited {
@@ -13,12 +41,109 @@ a:hover {
 color:#333333;
 }
 
-#body {
+hr {
+margin-left:2%;
+margin-right:2%;
+}
+
+figure, .figure {
 display:block;
+}
+
+figure img, .figure img {
+display:block;
+margin:0 auto;
+border:1px solid lightgray;
+}
+
+figure figcaption, figure .figcaption {
+display:block;
+font-size:x-small;
+margin:0 auto;
+}
+
+.clearfix:after {
+content:"";
+display:block;
+height:0;
+clear:both;
+visibility:hidden;
+}
+
+.centered {
+margin:0 auto;
+}
+
+.columngroup:after {
+content:"";
+display:block;
+height:0;
+clear:both;
+visibility:hidden;
+}
+
+.twocolumn {
+width:50%;
+float:left;
+}
+
+.threecolumn {
+width:33%;
+float:left;
+}
+
+.fourcolumn {
+width:25%;
+float:left;
+}
+
+.columntable {
+display:table;
+}
+
+.twocolumncell {
+display:table-cell;
+width:25%;
+}
+
+.threecolumncell {
+display:table-cell;
+width:33%;
+}
+
+.fourcolumncell {
+display:table-cell;
+width:25%;
+}
+
+.list {
+list-style-type: none;
+font-size:small;
+margin-left:15px;
+margin-bottom:15px;
+}
+
+.linklist {
+list-style-type:none;
+font-size:small;
+margin-bottom:10px;
+}
+
+.linklist li {
+margin-left:5px;
+}
+
+.description {
+margin-left:15px;
+margin-right:15px;
+}
+
+#body {
 margin-left:auto;
 margin-right:auto;
 width:960px;
 background-image:url('/background.jpg');
+background-attachment:fixed;
 font-family:Arial, Helvetica, sans-serif;
 border:3px solid black;
 margin-top:8px;
@@ -26,12 +151,10 @@ margin-top:8px;
 
 #header {
 position:relative;
-display:block;
 }
 
 #logo {
 position:relative;
-display:block;
 height:100px;
 background-color:white;
 border:10px solid white;
@@ -41,70 +164,100 @@ border:10px solid white;
 position:relative;
 display:block;
 height:52px;
-border-bottom:2px;
-border-color:white;
-border-style:solid;
+border-bottom:2px solid white;
+overflow:hidden;
 }
 
-#nav li {
-display:inline;
-margin-right:-4px;
+/* Experimental - Non-image-based navigation buttons
+.nav_button {
+position:relative;
+display:box;
+height:52px;
+background-color:gray;
+text-align:center;
+vertical-align:middle;
 }
 
-#nav_button {
+.nav_button:hover {
+background-color:maroon;
+}
+
+#about-us { width:126px; }
+#strategic-sourcing { width:160px; }
+#government-projects { width:171px; }
+#commercial-projects { width:171px; }
+#information-technology { width:183px; }
+#locations { width:149px; }
+*/
+
+#nav div {
+float:left;
+}
+
+.nav_button {
 height:52px;
 width:0px;
 background-image:url('nav.png');
 background-repeat:no-repeat;
 }
 
-#nav_button:hover {
-background-image:url('nav_down.png');
-background-repeat:no-repeat;
-}
-
 #about-us img {
-background-position:0px;
 width:126px;
+background-position:0px 0px;
+}
+#about-us img:hover {
+background-position:0px -52px;
 }
 
 #strategic-sourcing img {
-background-position:-126px;
 width:160px;
+background-position:-126px 0px;
+}
+#strategic-sourcing img:hover {
+background-position:-126px -52px;
 }
 
 #government-projects img {
-background-position:-286px;
 width:171px;
+background-position:-286px 0px;
+}
+#government-projects img:hover {
+background-position:-286px -52px;
 }
 
 #commercial-projects img {
-background-position:-457px;
 width:171px;
+background-position:-457px 0px;
+}
+#commercial-projects img:hover {
+background-position:-457px -52px;
 }
 
-#information-technology img{
-background-position:-628px;
+#information-technology img {
 width:183px;
+background-position:-628px 0px;
+}
+#information-technology img:hover {
+background-position:-628px -52px;
 }
 
 #locations img {
-background-position:-811px;
 width:149px;
+background-position:-811px 0px;
+}
+#locations img:hover {
+background-position:-811px -52px;
 }
 
 #eyecandy {
 position:relative;
-display:block;
 height:200px;
-border-bottom:2px;
-border-color:#333333;
-border-style:solid;
+border-bottom:2px solid #333333;
 }
 
 #content {
 position:relative;
-display:block;
+width:940px;
 background-color:white;
 padding-top:20px;
 padding-bottom:20px;
@@ -114,12 +267,10 @@ padding-right:10px;
 
 #footer {
 position:relative;
-display:block;
 }
 
 #footer_info {
 position:relative;
-display:block;
 text-align:right;
 color:white;
 background-color:#333333;
@@ -129,7 +280,6 @@ font-size:small;
 
 #footer_nav {
 position:relative;
-display:block;
 height:20px;
 background-color:#CCCCCC;
 border-top:4px;
