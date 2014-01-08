@@ -1,0 +1,39 @@
+RewriteEngine On
+
+# map physical files/symlinks/directories
+RewriteCond %{REQUEST_FILENAME} -s [OR]
+RewriteCond %{REQUEST_FILENAME} -l [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^.*$ - [NC,L]
+
+# appends www. subdomain to bare domain for SEO friendliness
+Rewritecond %{HTTP_HOST} ^strikegroup.org
+RewriteRule ^(.*)$ http://www.strikegroup.org/$1 [R=301,L]
+
+# accept url's without an extension and map them to .html
+RewriteRule ^([\w\d\-]+)$ /html/$1.html [NC,L]
+
+# one-to-many URL-to-file mappings
+RewriteRule ^/contact-us$ /locations [L]
+
+# map files-by-type to their constituent folders
+RewriteRule ^(.*\.(gif|png|jpg|ico))$ /images/$1 [L]
+RewriteRule ^(.*\.css)$ /stylesheets/$1 [L]
+RewriteRule ^(.*\.html)$ /html/$1 [L]
+RewriteRule ^(.*\.js)$ /scripts/$1 [L]
+RewriteRule ^(.*\.(pdf|xml|atom))$ /docs/$1 [L]
+RewriteRule ^(.*\.(mp3|mp4|ogv|ogg|webm|swf))$ /media/$1 [L]
+
+# redirect all old URLs to the new URI mapping
+redirect 301 /index.html 			http://www.strikegroup.org/about-us
+redirect 301 /strategic.html 		http://www.strikegroup.org/strategic-sourcing
+redirect 301 /electrical.html 		http://www.strikegroup.org/sourcing-electrical
+redirect 301 /supplychain.html 		http://www.strikegroup.org/kitting-capabilities
+redirect 301 /Government.html 		http://www.strikegroup.org/government-projects
+redirect 301 /comcam.html 			http://www.strikegroup.org/usmc
+redirect 301 /va.html 				http://www.strikegroup.org/louis-stokes-medical
+redirect 301 /dynmcdermott.html 	http://www.strikegroup.org/dynmcdermott-petroleum
+redirect 301 /commercial.html 		http://www.strikegroup.org/commercial-projects
+redirect 301 /detschools.html 		http://www.strikegroup.org/detroit-public-schools
+redirect 301 /it.html 				http://www.strikegroup.org/information-technology
+redirect 301 /location.html 		http://www.strikegroup.org/locations

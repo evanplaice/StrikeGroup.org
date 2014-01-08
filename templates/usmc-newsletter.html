@@ -1,19 +1,26 @@
 {% extends '_base.html' %}
-{% block feed %}<link href="http://dl.dropbox.com/u/34643611/newsletter/newsletter.atom" type="application/atom+xml" rel="alternate" title="Strike Group Newsletter" />{% endblock %}
-{% block page_js %}<script src="http://www.blastcasta.com/feed-to-json.aspx?feedurl=http://dl.dropbox.com/u/34643611/newsletter/newsfeed.atom&param=newsfeed"></script>{% endblock %}
+{% block feed %}<link href="news.atom" type="application/atom+xml" rel="alternate" title="Strike Group Newsletter" />{% endblock %}
+{% block page_js %}<!--<script src="http://www.blastcasta.com/feed-to-json.aspx?feedurl=http://dl.dropbox.com/u/34643611/newsletter/newsfeed.atom&param=newsfeed"></script>-->{% endblock %}
 {% block page_script %}
-<script type="text/javascript">
+<script src="jquery.xml2json.js"></script>
+<script>
   // Fetch the newsletter info before the page loads
-  $(document).ready(function(){ loadFeed(); });
+  $(document).ready(function(){
+    $.get('news.atom', function(xml) {
+      newsfeed = $.xml2json(xml);
+      loadFeed(newsfeed);
+    });
+  });
 
   // Handle the page loading if AJAX successfully loads the newsletter atom feed
-  function loadFeed() {
+  function loadFeed(newsfeed) {
     entries = [];
-    for(i in newsfeed.feed.entry) {
+    console.log(newsfeed)
+    for(i in newsfeed.entry) {
       entry = {};
-      entry.title = newsfeed.feed.entry[i].title;
-      entry.link = newsfeed.feed.entry[i].link[0].href;
-      entry.alternate = newsfeed.feed.entry[i].link[1].href;
+      entry.title = newsfeed.entry[i].title;
+      entry.link = newsfeed.entry[i].link[0].href;
+      entry.alternate = newsfeed.entry[i].link[1].href;
       entries.push(entry);
     }
     //console.log(entries);

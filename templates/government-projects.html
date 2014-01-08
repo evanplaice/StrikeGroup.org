@@ -3,7 +3,7 @@
 {% block page_style %}
 <style>
 .listingimage {
-width:202px; height:156px;
+width:182px; height:140px;
 }
 
 .details {
@@ -16,7 +16,7 @@ padding-right:10px;
 border-right:none;
 }
 
-.fourcolumncelltriple {
+.fivecolumncelltriple {
 display: table-cell;
 width: 75%;
 }
@@ -24,66 +24,77 @@ width: 75%;
 {% endblock %}
 {% block page_content %}
   <section id=titles class=columngroup>
-    <header id=usmc_title class=fourcolumn>
+    <header id=usmc_title class=fivecolumn>
       <h4>MARINE CORPS</h4>
     </header>
-    <header id=dot_title class=fourcolumn>
+    <header id=dot_title class=fivecolumn>
       <h4>DEPARTMENT OF TRANSPORTATION</h4>
     </header>
-    <header id=va_title class=fourcolumn>
+    <header id=va_title class=fivecolumn>
       <h4>VETERAN ADMINISTRATION</h4>
     </header>
-    <header id=doe_title class=fourcolumn>
+    <header id=doe_title class=fivecolumn>
       <h4>DEPARTMENT OF ENERGY</h4>
+    </header>
+    <header id=l3_title class=fivecolumn>
+      <h4>L-3 COMMUNICATIONS</h4>
     </header>
   </section>
 
   <section id=images class=columngroup>
-    <div id=usmc_pic class=fourcolumn>
+    <div id=usmc_pic class=fivecolumn>
       <figure class=centered>
         <img class=listingimage src="government_projects_1.jpg" alt="Marine Corps Image" />
       </figure>
     </div>
-    <div id=dot_pic class=fourcolumn>
+    <div id=dot_pic class=fivecolumn>
       <figure class=centered>
         <img class=listingimage src="government_projects_2.jpg" alt="Department of Transportation Image" />
       </figure>
     </div>
-    <div id=va_pic class=fourcolumn>
+    <div id=va_pic class=fivecolumn>
       <figure class=centered>
-        <img class=listingimage src="government_projects_4.jpg" alt="Veteran Administration Image" />
+        <img class=listingimage src="government_projects_3.jpg" alt="Veteran Administration Image" />
       </figure>
     </div>
-    <div id=doe_pic class=fourcolumn>
+    <div id=doe_pic class=fivecolumn>
       <figure class=centered>
-        <img class=listingimage src="government_projects_3.jpg" alt="Department of Energy Image" />
+        <img class=listingimage src="government_projects_4.jpg" alt="Department of Energy Image" />
+      </figure>
+    </div>
+    <div id=l3_pic class=fivecolumn>
+      <figure class=centered>
+        <img class=listingimage src="government_projects_5.png" alt="L3 Communications Image" />
       </figure>
     </div>
   </section>
 
   <section id=separators class=columngroup>
-    <div class=fourcolumn>
+    <div class=fivecolumn>
       <hr />
     </div>
-    <div class=fourcolumn>
+    <div class=fivecolumn>
       <hr />
     </div>
-    <div class=fourcolumn>
+    <div class=fivecolumn>
       <hr />
     </div>
-    <div class=fourcolumn>
+    <div class=fivecolumn>
+      <hr />
+    </div>
+    <div class=fivecolumn>
       <hr />
     </div>
   </section>
 
-  <section id=links class='fourcolumntable'>
-    <div id=usmc_text class='fourcolumncell details'>
+  <section id=links class=fivecolumntable>
+    <div id=usmc_text class="fivecolumncell details">
       <h5>Around the World Logistics</h5>
       <br />
       <p>Strike Group is committed to provide support so Combat Camera and Public Affairs can acquire, manipulate, reproduce, design, develop, archive, retrieve and manage imagery and media acquire in forward-deployed locations throughout the world.</p>
       <h3><a href="/usmc">::READ MORE::</a></h3>
     </div>
-    <div id=dot_text class='fourcolumncell details'>
+    <div id=dot_text class="fivecolumncell details">
       <p>Strike Group has worked on various project for the federal government prime contract to the Department of Transportation</p>
       <p>Listed are some examples of our federal projects:</p>
       <ul class=fancylist>
@@ -94,15 +105,21 @@ width: 75%;
         <li>DOT New Orleans, LA
       </ul>
     </div>
-    <div id=va_text class='fourcolumncell details'>
+    <div id=va_text class="fivecolumncell details">
       <p>Strike Group was proud to work on the Louis Stokes VA Medical Center Project.</p>
       <h3><a href="/louis-stokes-medical">::READ MORE::</a></h3>
     </div>
-    <div id=doe_text class='fourcolumncell details details_last'>
+    <div id=doe_text class="fivecolumncell details">
       <h5>DynMcDermott Petroleum Operations Company</h5>
       <br />
       <p>Strike Group currently provides electrical hardware and supplies to five of DynMcDermott facilities that assist in managing our nation's strategic Petroleum Reserves.</p>
       <h3><a href="/dynmcdermott-petroleum">::READ MORE::</a></h3>
+    </div>
+    <div id=l3_text class="fivecolumncell details details_last">
+      <h5>Platform Integration Division</h5>
+      <br />
+      <p>L-3 Integrated Systems Group is the most capable and dependable aircraft modernization and mission systems integration company in the world. We are recognized internationally as a systems integration organization specializing in the study, design, development, and integration of mission systems, and the modernization and maintenance of aircraft.</p>
+      <h3><a href="http://www2.l-3com.com/is/waco/index.html">::READ MORE::</a>
     </div>
   </section>
 {% endblock %}

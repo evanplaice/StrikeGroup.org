@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<feed xmlns="http://www.w3.org/2005/Atom">
+	<title>Strike Group Newsletter</title>
+	<author>
+		<name>Ramiro Sanchex</name>
+		<email>rsanchez@usmc-comcam.com</email>
+    </author>
+
+	<entry>
+		<title>December, 2012</title>
+		<link href="http://dl.dropbox.com/u/34643611/newsletter/December-2012_(2.1MB).pdf" />
+		<link rel="alternate" href="http://dl.dropbox.com/u/34643611/newsletter/December-2012_Print_Proof_(82MB).pdf"/>
+	</entry>
+
+	<entry>
+		<title>November, 2012</title>
+		<link href="http://dl.dropbox.com/u/34643611/newsletter/November-2012_(1.4MB).pdf" />
+		<link rel="alternate" href="http://dl.dropbox.com/u/34643611/newsletter/November-2012_Print_Proof_(31MB).pdf"/>
+	</entry>
+
+	<entry>
+		<title>October, 2012</title>
+		<link href="http://dl.dropbox.com/u/34643611/newsletter/October-2012_(1.1MB).pdf" />
+		<link rel="alternate" href="http://dl.dropbox.com/u/34643611/newsletter/October-2012_Print_Proof_(45.2MB).pdf"/>
+	</entry>
+
+	<entry>
+		<title>September, 2012</title>
+		<link href="http://dl.dropbox.com/u/34643611/newsletter/September-2012_(1.5MB).pdf" />
+		<link rel="alternate" href="http://dl.dropbox.com/u/34643611/newsletter/September-2012_Print_Proof_(7.3MB).pdf"/>
+	</entry>
+
+	<entry>
+		<title>August, 2012</title>
+		<link href="https://dl.dropbox.com/u/34643611/newsletter/August-2012_(0.8MB).pdf" />
+		<link rel="alternate" href="https://dl.dropbox.com/u/34643611/newsletter/August-2012_Print_Proof_(21MB).pdf"/>
+	</entry>
+
+ 	<entry>
+		<title>July, 2012</title>
+		<link href="https://dl.dropbox.com/u/34643611/newsletter/July-2012_(1.5MB).pdf" />
+		<link rel="alternate" href="https://dl.dropbox.com/u/34643611/newsletter/July-2012_Print_Proof_(58MB).pdf"/>
+	</entry>
+
+ 	<entry>
+		<title>June, 2012</title>
+		<link href="https://dl.dropbox.com/u/34643611/newsletter/June-2012_(1.8MB).pdf" />
+		<link rel="alternate" href="https://dl.dropbox.com/u/34643611/newsletter/June-2012_Print_Proof_(70MB).pdf"/>
+	</entry>
+
+ 	<entry>
+		<title>May, 2012</title>
+		<link href="http://dl.dropbox.com/u/34643611/newsletter/May-2012_(2MB).pdf" />
+		<link rel="alternate" href="http://dl.dropbox.com/u/34643611/newsletter/May-2012_Print_Proof_(43.1MB).pdf"/>
+	</entry>
+
+	<entry>
+		<title>April, 2012</title>
+		<link href="http://dl.dropbox.com/u/34643611/newsletter/April-2012_(1.3MB).pdf" />
+		<link rel="alternate" href="http://dl.dropbox.com/u/34643611/newsletter/April-2012_Print_Proof_(27.8MB).pdf"/>
+	</entry>
+
+</feed>

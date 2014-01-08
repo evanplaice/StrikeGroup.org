@@ -1,5 +1,5 @@
 application: strikegrouptest
-version: 3
+version: 4
 runtime: python27
 api_version: 1
 threadsafe: yes
@@ -26,9 +26,14 @@ handlers:
   static_files: static/docs/sitemap.xml
   upload: static/docs/sitemap.xml
 
-- url: /(.*\.(pdf|xml|atom))
+- url: /(.*\.(pdf|xml))
   static_files: static/docs/\1
-  upload: static/docs/(.*\.(pdf|xml|atom))
+  upload: static/docs/(.*\.(pdf|xml))
+
+- url: /(.*\.atom)
+  mime_type: application/atom+xml
+  static_files: static/docs/\1
+  upload: static/docs/(.*\.atom)
 
 - url: /newsletter/(.*\.(pdf))
   static_files: static/docs/newsletter/\1
@@ -54,6 +59,8 @@ handlers:
   static_files: static/media/\1
   upload: static/media/(.*\.(mp3|mp4|ogv|ogg|webm|swf))
 
+- url: /feed
+  script: news.main.application
 
 - url: /.*
   script: app.main.application
