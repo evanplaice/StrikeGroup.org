@@ -1,0 +1,157 @@
+/* layout.css */
+
+a {
+text-decoration:none;
+color:maroon;
+}
+
+a:visited {
+color:maroon;
+}
+
+a:hover {
+color:#333333;
+}
+
+#body {
+display:block;
+margin-left:auto;
+margin-right:auto;
+width:960px;
+background-image:url('/background.jpg');
+font-family:Arial, Helvetica, sans-serif;
+border:3px solid black;
+margin-top:8px;
+}
+
+#header {
+position:relative;
+display:block;
+}
+
+#logo {
+position:relative;
+display:block;
+height:100px;
+background-color:white;
+border:10px solid white;
+}
+
+#nav {
+position:relative;
+display:block;
+height:52px;
+border-bottom:2px;
+border-color:white;
+border-style:solid;
+}
+
+#nav li {
+display:inline;
+margin-right:-4px;
+}
+
+#nav_button {
+height:52px;
+width:0px;
+background-image:url('nav.png');
+background-repeat:no-repeat;
+}
+
+#nav_button:hover {
+background-image:url('nav_down.png');
+background-repeat:no-repeat;
+}
+
+#about-us img {
+background-position:0px;
+width:126px;
+}
+
+#strategic-sourcing img {
+background-position:-126px;
+width:160px;
+}
+
+#government-projects img {
+background-position:-286px;
+width:171px;
+}
+
+#commercial-projects img {
+background-position:-457px;
+width:171px;
+}
+
+#information-technology img{
+background-position:-628px;
+width:183px;
+}
+
+#locations img {
+background-position:-811px;
+width:149px;
+}
+
+#eyecandy {
+position:relative;
+display:block;
+height:200px;
+border-bottom:2px;
+border-color:#333333;
+border-style:solid;
+}
+
+#content {
+position:relative;
+display:block;
+background-color:white;
+padding-top:20px;
+padding-bottom:20px;
+padding-left:10px;
+padding-right:10px;
+}
+
+#footer {
+position:relative;
+display:block;
+}
+
+#footer_info {
+position:relative;
+display:block;
+text-align:right;
+color:white;
+background-color:#333333;
+padding:1em;
+font-size:small;
+}
+
+#footer_nav {
+position:relative;
+display:block;
+height:20px;
+background-color:#CCCCCC;
+border-top:4px;
+border-bottom:4px;
+border-color:#CCCCCC;
+border-style:solid;
+font-size:x-small;
+font-weight:bold;
+}
+
+#footer_nav ul { text-align:center;}
+
+#footer_nav li {
+display:inline;
+border-left:1px solid black;
+padding-left:1em;
+margin-left:1em;
+}
+
+#footer_nav li:first-child {
+border-left:0;
+padding-left:0;
+margin-left:0;
+}
+/* END layout.css*/
