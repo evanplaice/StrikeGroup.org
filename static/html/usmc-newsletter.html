@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>USMC Combat Camera Newsletter - Strike Group</title>
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<meta name="author" content="Evan Plaice" />
+<meta charset="utf-8">
+<link rel="stylesheet" href="/reset.css" />
+<link rel="stylesheet" href="/base.css" />
+<link href="http://dl.dropbox.com/u/34643611/newsletter/newsletter.atom" type="application/atom+xml" rel="alternate" title="Strike Group Newsletter" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<!--[if lt IE 9]>
+<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<script src="http://www.blastcasta.com/feed-to-json.aspx?feedurl=http://dl.dropbox.com/u/34643611/newsletter/newsfeed.atom&param=newsfeed"></script>
+<script type="text/javascript">
+  // Fetch the newsletter info before the page loads
+  $(document).ready(function(){ loadFeed(); });
+
+  // Handle the page loading if AJAX successfully loads the newsletter atom feed
+  function loadFeed() {
+    entries = [];
+    for(i in newsfeed.feed.entry) {
+      entry = {};
+      entry.title = newsfeed.feed.entry[i].title;
+      entry.link = newsfeed.feed.entry[i].link[0].href;
+      entry.alternate = newsfeed.feed.entry[i].link[1].href;
+      entries.push(entry);
+    }
+    console.log(entries);
+    newsletter = entries[0]["link"];
+    changeSrc(newsletter);
+    for(i in entries) {
+      $("#feed").append("<option value=" + entries[i]["link"] + ">" + entries[i]['title'] + "</option>");
+    }
+  }
+
+  function changeSrc(link) {
+    // adds a url hack to fix a firefox-specific bug
+    if (navigator.userAgent.indexOf("Firefox")==-1) {
+      doc = "http://docs.google.com/viewer?url=" + link + "&embedded=true";
+    }
+    else {
+      doc = "http://docs.google.com/viewer?url=" + link + "?&embedded=true";
+    }
+    $("iframe").attr("src", doc);
+    for(i in entries) {
+      if(entries[i].link === link) {
+        var lnk = entries[i].link;
+        var alt = entries[i].alternate;
+      }
+    }
+    var lnkTmp = lnk.split("/");
+    var lnkName = lnkTmp[lnkTmp.length-1];
+    $("#lowres").attr("href",lnk);
+    $("#lowres").text(lnkName);
+
+    var altTmp = alt.split("/");
+    var altName = altTmp[altTmp.length-1];
+    $("#hires").attr("href", alt);
+    $("#hires").text(altName);
+  }
+</script>
+
+</head>
+
+<body id=body>
+
+<header id=header>
+  <div id=logo>
+    <a href="/"><img src='/logo.png' alt='Strike Group Logo' width="220" height="100" /></a>
+  </div>
+  <nav id=nav class=clearfix>
+    <div id='about-us'><a href='/'><img class=nav_button src='/transparent.png' alt="About Us" /></a></div>
+    <!--<li id='about-us' class='nav_button'><a href='/'>About Us</a></li>-->
+    <div id='strategic-sourcing'><a href='/strategic-sourcing'><img class=nav_button src='/transparent.png' alt="Strategic Sourcing" /></a></div>
+    <!--<li id='strategic-sourcing' class='nav_button'><a href='/strategic-sourcing'>Strategic Sourcing</a></li>-->
+    <div id='government-projects'><a href='/government-projects'><img class=nav_button src='/transparent.png' alt="Government Projects" /></a></div>
+    <!--<li id='government-projects' class='nav_button'><a href='/government-projects'>Government Projects</a></li>-->
+    <div id='commercial-projects'><a href='/commercial-projects'><img class=nav_button src='/transparent.png' alt="Commercial Projects" /></a></div>
+    <!--<li id='commercial-projects' class='nav_button'><a href='/commercial-projects'>Commercial Projects</a></li>-->
+    <div id='information-technology'><a href='/information-technology'><img class=nav_button src='/transparent.png' alt="Information Technology" /></a></div>
+    <!--<li id='information-technology' class='nav_button'><a href='/information-technology'>Information Technology</a></li>-->
+    <div id='locations'><a href='/locations'><img class=nav_button src='/transparent.png' alt="Locations" /></a></div>
+    <!--<li id='locations' class='nav_button'><a href='/locations'>Locations</a></li>-->
+    <div id='careers'><a href='/careers'><img class=nav_button src='/transparent.png' alt="Careers" /></a></div>
+    <!--<li id='careers' class='nav_button'><a href='/careers'>Careers</a></li>-->
+    <div id='contact-us'><a href='/contact-us'><img class=nav_button src='/transparent.png' alt="Contact Us" /></a></div>
+    <!--<li id='contact-us' class='nav_button'><a href='/contact-us'>Contact Us</a></li>-->
+    </nav>
+</header>
+
+<section id=content>
+
+<!-- page_content template -->
+<div class=columngroup>
+  <div class=twocolumn style="width:30%; margin-left:30px;">
+    <span>Select a Newsletter:</span>
+    <select id=feed onChange="changeSrc(this.options[this.selectedIndex].value);" style="width:200px">
+    </select>
+  </div>
+  <div class=twocolumn>
+    <span>Download Low-Res Version:</span>
+    <a id=lowres></a>
+    <br />
+    <br />
+    <span>Download Hi-Res Version:</span>
+    <a id=hires></a>
+  </div>
+</div>
+<hr />
+</div>
+<div style="width:850px; height:600px; margin-left:auto; margin-right:auto;border:1px solid lightgray">
+  <iframe id=iframe src="" style="width:850px; height:600px;" frameborder="0"></iframe>
+</div>
+<!-- end template -->
+
+</section>
+
+<footer id=footer>
+  <div id=footer_info>
+    Strike Group LLC<br />
+    313.586.0003<br />
+    Lanec@strikegroup.org
+  </div>
+  <nav id=footer_nav>
+    <ul>
+      <li><a href='/'>About Us</a></li>
+      <li><a href='/strategic-sourcing'>Strategic Sourcing</a></li>
+      <li><a href='/government-projects'>Government Projects</a></li>
+      <li><a href='/commercial-projects'>Commercial Projects</a></li>
+      <li><a href='/information-technology'>Information Technology</a></li>
+      <li><a href='/locations'>Locations</a></li>
+      <li><a href='/careers'>Careers</a></li>
+      <li><a href='/contact-us'>Contact Us</a></li>
+      </ul>
+  </nav>
+</footer>
+
+</body>
+
+</html>

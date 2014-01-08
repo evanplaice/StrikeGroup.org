@@ -1,0 +1,75 @@
+{% extends '_base.html' %}
+{% block feed %}<link href="http://dl.dropbox.com/u/34643611/newsletter/newsletter.atom" type="application/atom+xml" rel="alternate" title="Strike Group Newsletter" />{% endblock %}
+{% block page_js %}<script src="http://www.blastcasta.com/feed-to-json.aspx?feedurl=http://dl.dropbox.com/u/34643611/newsletter/newsfeed.atom&param=newsfeed"></script>{% endblock %}
+{% block page_script %}
+<script type="text/javascript">
+  // Fetch the newsletter info before the page loads
+  $(document).ready(function(){ loadFeed(); });
+
+  // Handle the page loading if AJAX successfully loads the newsletter atom feed
+  function loadFeed() {
+    entries = [];
+    for(i in newsfeed.feed.entry) {
+      entry = {};
+      entry.title = newsfeed.feed.entry[i].title;
+      entry.link = newsfeed.feed.entry[i].link[0].href;
+      entry.alternate = newsfeed.feed.entry[i].link[1].href;
+      entries.push(entry);
+    }
+    //console.log(entries);
+    newsletter = entries[0]["link"];
+    changeSrc(newsletter);
+    for(i in entries) {
+      $("#feed").append("<option value=" + entries[i]["link"] + ">" + entries[i]['title'] + "</option>");
+    }
+  }
+
+  function changeSrc(link) {
+    // adds a url hack to fix a firefox-specific bug
+    if (navigator.userAgent.indexOf("Firefox")==-1) {
+      doc = "http://docs.google.com/viewer?url=" + link + "&embedded=true";
+    }
+    else {
+      doc = "http://docs.google.com/viewer?url=" + link + "?&embedded=true";
+    }
+    $("iframe").attr("src", doc);
+    for(i in entries) {
+      if(entries[i].link === link) {
+        var lnk = entries[i].link;
+        var alt = entries[i].alternate;
+      }
+    }
+    var lnkTmp = lnk.split("/");
+    var lnkName = lnkTmp[lnkTmp.length-1];
+    $("#lowres").attr("href",lnk);
+    $("#lowres").text(lnkName);
+
+    var altTmp = alt.split("/");
+    var altName = altTmp[altTmp.length-1];
+    $("#hires").attr("href", alt);
+    $("#hires").text(altName);
+  }
+</script>
+{% endblock %}
+{% block page_content %}
+<div class=columngroup>
+  <div class=twocolumn style="width:30%; margin-left:30px;">
+    <span>Select a Newsletter:</span>
+    <select id=feed onChange="changeSrc(this.options[this.selectedIndex].value);" style="width:200px">
+    </select>
+  </div>
+  <div class=twocolumn>
+    <span>Download Low-Res Version:</span>
+    <a id=lowres></a>
+    <br />
+    <br />
+    <span>Download Hi-Res Version:</span>
+    <a id=hires></a>
+  </div>
+</div>
+<hr />
+</div>
+<div style="width:850px; height:600px; margin-left:auto; margin-right:auto;border:1px solid lightgray">
+  <iframe id=iframe src="" style="width:850px; height:600px;" frameborder="0"></iframe>
+</div>
+{% endblock %}

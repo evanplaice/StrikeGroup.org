@@ -1,7 +1,7 @@
-{% extends 'base.html' %}
-{% set title='Locations' %}
+{% extends '_base.html' %}
 {% set eyecandy='eyecandy6.jpg' %}
 {% block page_style %}
+<style>
 #locations {
 margin-bottom:10px;
 }
@@ -23,7 +23,7 @@ margin:0 auto;
 #contacts div {
 width:50%;
 }
-
+</style>
 {% endblock %}
 {% block page_content %}
 <section id=locations class=clearfix>
@@ -46,7 +46,7 @@ width:50%;
   </section>
   <div id=map class=twocolumn>
     <figure class=centered>
-      <img src="locations_1.jpg" />
+      <img src="locations_1.png" alt="Locations Map" style="width:527px; height:318;" />
     </figure>
   </div>
 </section>

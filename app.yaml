@@ -1,5 +1,5 @@
 application: strikegrouptest
-version: 2
+version: 3
 runtime: python27
 api_version: 1
 threadsafe: yes
@@ -26,6 +26,18 @@ handlers:
   static_files: static/docs/sitemap.xml
   upload: static/docs/sitemap.xml
 
+- url: /(.*\.(pdf|xml|atom))
+  static_files: static/docs/\1
+  upload: static/docs/(.*\.(pdf|xml|atom))
+
+- url: /newsletter/(.*\.(pdf))
+  static_files: static/docs/newsletter/\1
+  upload: static/docs/newsletter/(.*\.(pdf))
+
+- url: /(.*\.html)
+  static_files: static/html/\1
+  upload: static/html/(.*\.html)
+
 - url: /(.*\.(gif|png|jpg))
   static_files: static/images/\1
   upload: static/images/(.*\.(gif|png|jpg))
@@ -42,19 +54,11 @@ handlers:
   static_files: static/media/\1
   upload: static/media/(.*\.(mp3|mp4|ogv|ogg|webm|swf))
 
-#- url: /admin
-# script: app.main.application
-#  login: admin
 
 - url: /.*
   script: app.main.application
 
-- url: /usmc/.*
-  script: app.main.application
-
 libraries:
-- name: django
-  version: "1.2"
 - name: jinja2
   version: latest
 - name: yaml

@@ -1,7 +1,0 @@
-basic:
- - user:combat.camera
-   pass:combat.camera
-
-oAuth:
- - user:evanplaice@gmail.com
-   pass:unknown

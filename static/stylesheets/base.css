@@ -1,8 +1,15 @@
-/* layout.css */
+/* base.css */
 body {
 font-family:Arial, Helvetica, sans-serif;
 font-size:small;
 }
+h1 {
+font-size:x-large;
+text-align:center;
+vertical-align:middle;
+margin:auto;
+}
+
 h2 {
 font-size:medium;
 }
@@ -28,13 +35,9 @@ p {
 margin-bottom:15px;
 }
 
-a {
+a, a:visited {
 color:maroon;
 text-decoration:underline;
-}
-
-a:visited {
-color:maroon;
 }
 
 a:hover {
@@ -46,17 +49,17 @@ margin-left:2%;
 margin-right:2%;
 }
 
-figure, .figure {
+figure {
 display:block;
 }
 
-figure img, .figure img {
+figure img {
 display:block;
 margin:0 auto;
 border:1px solid lightgray;
 }
 
-figure figcaption, figure .figcaption {
+figure figcaption {
 display:block;
 font-size:x-small;
 margin:0 auto;
@@ -82,45 +85,56 @@ clear:both;
 visibility:hidden;
 }
 
-.twocolumn {
-width:50%;
-float:left;
-}
-
-.threecolumn {
-width:33%;
-float:left;
-}
-
-.fourcolumn {
-width:25%;
-float:left;
-}
-
 .columntable {
 display:table;
 }
 
-.twocolumncell {
+.twocolumn, .threecolumn, .fourcolumn, .fivecolumn {
+float:left;
+}
+.twocolumnimage, .threecolumnimage, .fourcolumnimage, .fivecolumnimage {
+float:left;
+margin:0 auto;
+}
+.twocolumncell, .threecolumncell, .fourcolumncell, .fivecolumncell {
 display:table-cell;
+}
+
+.twocolumn, 	.twocolumncell, 	.twocolumnimage {
+width:50%;
+}
+.threecolumn, 	.threecolumncell, 	.threecolumnimage {
+width:33.3333%;
+}
+.fourcolumn, 	.fourcolumncell, 	.fourcolumnimage {
 width:25%;
 }
-
-.threecolumncell {
-display:table-cell;
-width:33%;
+.fivecolumn, 	.fivecolumncell, 	.fivecolumnimage {
+width:20%;
 }
 
-.fourcolumncell {
-display:table-cell;
-width:25%;
+.twocolumnimage {
+width:470px;
+}
+.threecolumnimage {
+width:312px;
+}
+.fourcolumnimage {
+width:220px;
+}
+.fivecolumnimage{
+width:180;
 }
 
-.list {
+.list, .fancylist {
 list-style-type: none;
 font-size:small;
 margin-left:15px;
 margin-bottom:15px;
+}
+
+.fancylist {
+list-style-type:circle;
 }
 
 .linklist {
@@ -157,7 +171,15 @@ position:relative;
 position:relative;
 height:100px;
 background-color:white;
-border:10px solid white;
+padding:10px;
+}
+
+.sublogo img {
+border:none;
+}
+
+.subtitle h1 {
+text-align:left;
 }
 
 #nav {
@@ -202,7 +224,7 @@ background-repeat:no-repeat;
 }
 
 #about-us img {
-width:126px;
+width:82px;
 background-position:0px 0px;
 }
 #about-us img:hover {
@@ -210,49 +232,72 @@ background-position:0px -52px;
 }
 
 #strategic-sourcing img {
-width:160px;
-background-position:-126px 0px;
+width:142px;
+background-position:-82px 0px;
 }
 #strategic-sourcing img:hover {
-background-position:-126px -52px;
+background-position:-82px -52px;
 }
 
 #government-projects img {
-width:171px;
-background-position:-286px 0px;
+width:160px;
+background-position:-224px 0px;
 }
 #government-projects img:hover {
-background-position:-286px -52px;
+background-position:-224px -52px;
 }
 
 #commercial-projects img {
-width:171px;
-background-position:-457px 0px;
+width:155px;
+background-position:-384px 0px;
 }
 #commercial-projects img:hover {
-background-position:-457px -52px;
+background-position:-384px -52px;
 }
 
 #information-technology img {
-width:183px;
-background-position:-628px 0px;
+width:176px;
+background-position:-539px 0px;
 }
 #information-technology img:hover {
-background-position:-628px -52px;
+background-position:-539px -52px;
 }
 
 #locations img {
-width:149px;
-background-position:-811px 0px;
+width:84px;
+background-position:-715px 0px;
 }
 #locations img:hover {
-background-position:-811px -52px;
+background-position:-715px -52px;
+}
+
+#careers img {
+width:73px;
+background-position:-799px 0px;
+}
+#careers img:hover {
+background-position:-799px -52px;
+}
+
+#contact-us img {
+width:88px;
+background-position:-872px 0px;
+}
+#contact-us img:hover {
+background-position:-872px -52px;
 }
 
 #eyecandy {
 position:relative;
 height:200px;
 border-bottom:2px solid #333333;
+}
+
+.subeyecandy {
+position:relative;
+height:200px;
+margin-left:-10px;
+margin-bottom:20px;
 }
 
 #content {
@@ -290,7 +335,9 @@ font-size:x-small;
 font-weight:bold;
 }
 
-#footer_nav ul { text-align:center;}
+#footer_nav ul {
+text-align:center;
+}
 
 #footer_nav li {
 display:inline;
@@ -304,4 +351,4 @@ border-left:0;
 padding-left:0;
 margin-left:0;
 }
-/* END layout.css*/
+/* END base.css */

@@ -1,27 +1,30 @@
-{% extends 'base.html' %}
-{% set title='Certifications' %}
+{% extends '_base.html' %}
 {% set eyecandy='eyecandy1.jpg' %}
 {% block page_style %}
+<style>
 #listing li {
-  list-style-type:circle;
   padding-bottom:15px;
   margin-bottom:15px;
   border-bottom:1px solid lightgray;
   margin-left:40px;
   margin-right:2%;
 }
+
+#listing img {
+  border:none;
+}
+</style>
 {% endblock %}
 {% block page_content %}
 <section id=main>
   <h2>Strike Group Certifications</h2>
   <hr />
-  <ul id=listing class=list>
+  <ul id=listing class=fancylist>
     <li>
       <h5>8a / SDB Certification</h5>
-      (DBE)Disadvantage Business Enterprises with The Department of Transportation (Nevada, Arizona, Colorado, Missouri, Mississippi, Michigan, Illinois, Indiana, Kentucky, Washington D.C. Pennsylvania and Ohio)
     </li>
     <li>
-      <h5>Veteran Owned</h5>
+      <h5>(DBE)Disadvantage Business Enterprises with The Department of Transportation (Nevada, Arizona, Colorado, Missouri, Mississippi, Michigan, Illinois, Indiana, Kentucky, Washington D.C. Pennsylvania and Ohio)</h5>
     </li>
     <li>
       <h5>(MBE) Minority Business Enterprises</h5>
@@ -30,9 +33,15 @@
       <h5>Service Disable Veteran Own Business</h5>
     </li>
     <li>
-      <h5>Department of Defense TS/SCI Clearance (individual)</h5>
-    <li>
       <h5>HUBZone</h5>
+    </li>
+    <li class=columngroup style="list-style-type:none;">
+      <figure class=twocolumn>
+        <img src="certifications_2.png" alt="SBA.gov Logo" />
+      </figure>
+      <figure class=twocolumn>
+        <img src="certifications_1.png" alt="SDVOSB Logo" />
+      </figure>
     </li>
   </ul>
 </section>

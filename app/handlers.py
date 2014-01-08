@@ -4,11 +4,15 @@ Handlers for the site
 The glue that binds static routes to their corresponding dynamic functionality.
 """
 
+__author__ = 'Evan Plaice'
+
+import os
 import logging
 import base64
 import webapp2
 from webapp2_extras import jinja2
 from webapp2_extras import security
+import yaml
 
 import urls
 
@@ -33,9 +37,21 @@ class BaseHandler(webapp2.RequestHandler):
     #})
     return j
 
-  def render_template(self, _template, **context):
-    self.response.write(self.jinja2.render_template(_template, **context))
+  def render_template(self, template, **context):
+    self.response.write(self.jinja2.render_template(template, **context))
 
+  def init(self, **params):
+    if hasattr(self, 'context') and hasattr(self, 'meta'):
+      return
+    self.context = {}
+    for url in urls.masterlist:
+      if url['uri'] == params.get('_uri','/'):
+        self.meta = url
+        break
+
+  def get(self, **params):
+    self.render_template(self.meta['template'], **self.context)
+    logging.debug('Rendering: ' + self.meta['template'])
 
 class StaticHandler(BaseHandler):
   """Handles all calls to static pages
@@ -44,37 +60,8 @@ class StaticHandler(BaseHandler):
   html templates as-is.
   """
 
-  def get(self, **kwargs):
-    self.render_template(kwargs.get('_uri','/'), nav=urls.nav)
-    logging.debug('StaticHandler: ' + kwargs.get('_uri','/'))
-
-
-class AuthHandler(BaseHandler):
-  def password(self):
-    password = 'shit';
-    return self.secure(password)
-
-  def secure(self, password):
-    return security.hash_password(password, method='sha1')
-
-  def login(self):
-    self.response.headers['WWW-Authenticate'] = 'Basic realm="Secure Area"'
-    self.response.set_status(401, message="Authorization Required")
-
-  def get(self, **kwargs):
-    if not 'Authorization' in self.request.headers:
-      self.login();
-    else:
-      auth = self.request.headers['Authorization']
-      (username, password) = base64.b64decode(auth.split(' ')[1]).split(':')
-      # Check the username and password, and proceed ...
-      password = self.secure(password)
-      if(self.password() == password):
-        logging.info('success')
-        logging.info('pass:' + password);
-        logging.info('pass:' + self.password());
-      else:
-        logging.info('fail')
-        logging.info('pass:' + password);
-        logging.info('pass:' + self.password());
-        self.login();
+  def get(self, **params):
+    self.init(**params)
+    self.context['title'] = self.meta['title']
+    self.context['nav'] = urls.main
+    BaseHandler.get(self, **params)

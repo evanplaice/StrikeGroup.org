@@ -1,0 +1,74 @@
+{% extends '_base.html' %}
+{% block feed %}<link href="http://dl.dropbox.com/u/34643611/newsletter/newsletter.atom" type="application/atom+xml" rel="alternate" title="Strike Group Newsletter" />{% endblock %}
+{% block page_script %}
+<script type="text/javascript">
+  // Fetch the newsletter info before the page loads
+  $(document).ready(function(){
+    $.get("/newsfeed.atom", {}, function(xml){ onSuccess(xml); });
+  });
+
+  // Handle the page loading if AJAX successfully loads the newsletter atom feed
+  function onSuccess(data) {
+    console.log(data)
+    entries = [];
+    $(data).find("entry").each(function(i){
+      entry = [];
+      entry.title = $(this).find("title").text();
+      entry.link = $(this).find("link").attr("href");
+      entry.alternate = $(this).find('[rel="alternate"]').attr("href");
+      entries.push(entry);
+    });
+    console.log(entries);
+    // Grab the 'newsletter' param from the URL
+    newsletter = getNewsletter();
+    // If the newsletter isn't found use the latest as the default
+    if(typeof(newsletter) === "undefined") {
+      newsletter = entries[0]["link"];
+    }
+    changeSrc(newsletter);
+    for(i in entries) {
+      $("#feed").append("<option value=" + entries[i]["link"] + ">" + entries[i]['title'] + "</option>");
+    }
+  }
+
+  function changeSrc(link) {
+    doc = "http://docs.google.com/gview?url=" + link + "&embedded=true";
+    $("iframe").attr("src", doc);
+    for(i in entries) {
+      if(entries[i].link === link) {
+        alt = entries[i].alternate;
+      }
+    }
+    tmp = alt.split("/");
+    altName = tmp[tmp.length-1];
+    $("#hires").attr("href", alt);
+    $("#hires").text(altName);
+  }
+
+  // Parse the 'newsletter' value from the URL
+  function getNewsletter() {
+    var $_GET = {};
+    document.location.search.replace(/\??(?:([^=]+)=([^&]*)&?)/g, function () {
+      function decode(s) {
+        return decodeURIComponent(s.split("+").join(" "));
+      }
+      $_GET[decode(arguments[1])] = decode(arguments[2]);
+    });
+    return $_GET["newsletter"];
+  }
+</script>
+{% endblock %}
+{% block page_content %}
+<div style="margin:15px;">
+  <span>Select a Newsletter:</span>
+  <select id=feed onChange="changeSrc(this.options[this.selectedIndex].value);" style="width:200px">
+  </select>
+  <span style="margin-left:100px;">Download Hi-Res Version:</span>
+  <a id=hires></a>
+</div>
+<hr />
+</div>
+<div style="width:850px; height:600px; margin-left:auto; margin-right:auto;border:1px solid lightgray">
+  <iframe id=iframe src="" style="width:850px; height:600px;" frameborder="0"></iframe>
+</div>
+{% endblock %}

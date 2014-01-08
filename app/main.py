@@ -6,9 +6,20 @@ set the site will launches so set any application-wide variables/configuration
 above that call.
 """
 
+__author__ = 'Evan Plaice'
+
+import os
 import webapp2
 import logging
 import routes
 
-#logging.getLogger().setLevel(logging.DEBUG)
-application = webapp2.WSGIApplication(routes.master, debug=False)
+# Detect whether this the 'Development' server
+DEV = os.environ['SERVER_SOFTWARE'].startswith('Dev')
+
+# Enable logging on the 'Development' server
+if(DEV):
+  logging.getLogger().setLevel(logging.DEBUG)
+else:
+  logging.getLogger().setLevel(logging.CRITICAL)
+
+application = webapp2.WSGIApplication(routes.masterlist, debug=False)

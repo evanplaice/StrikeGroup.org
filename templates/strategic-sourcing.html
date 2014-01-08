@@ -1,7 +1,11 @@
-{% extends 'base.html' %}
-{% set title='Strategic Sourcing' %}
+{% extends '_base.html' %}
 {% set eyecandy='eyecandy2.jpg' %}
 {% block page_style %}
+<style>
+.listingimage {
+width:182px; height:140px;
+}
+
 .details {
 border-right:1px solid lightgray;
 padding-left:10px;
@@ -11,6 +15,7 @@ padding-right:10px;
 #details_last {
 border-right:none;
 }
+</style>
 {% endblock %}
 {% block page_content %}
   <section id=introduction class=description>
@@ -18,60 +23,71 @@ border-right:none;
   </section>
 
   <section id=titles class=columngroup>
-    <div class=fourcolumn>
+    <div class=fivecolumn>
       <h4>ELECTRICAL LINE CARD</h4>
     </div>
-    <div class=fourcolumn>
+    <div class=fivecolumn>
       <h4>MASONRY LINE CARD</h4>
     </div>
-    <div class=fourcolumn>
+    <div class=fivecolumn>
       <h4>RESTAURANT SUPPLIES/PRODUCTS</h4>
     </div>
-    <div class=fourcolumn>
+    <div class=fivecolumn>
       <h4>BUILDING SUPPLIES</h4>
+    </div>
+    <div class=fivecolumn>
+      <h4>KITTING CAPABILITIES</h4>
     </div>
   </section>
 
   <section id=images class=columngroup>
-    <div class=fourcolumn>
+    <div class=fivecolumn>
       <figure class=centered>
-        <img src="strategic_sourcing_1.jpg" />
+        <img class=listingimage src="strategic_sourcing_1.jpg" alt="Electrical Line Card Image" />
       </figure>
     </div>
-    <div class=fourcolumn>
+    <div class=fivecolumn>
       <figure class=centered>
-        <img src="strategic_sourcing_2.jpg" />
+        <img class=listingimage src="strategic_sourcing_2.jpg" alt="Masonry Line Card Image" />
       </figure>
     </div>
-    <div class=fourcolumn>
+    <div class=fivecolumn>
       <figure class=centered>
-        <img src="strategic_sourcing_3.jpg" />
+        <img class=listingimage src="strategic_sourcing_3.jpg" alt="Restaurant Supplies/Products Image" />
       </figure>
     </div>
-    <div class=fourcolumn>
+    <div class=fivecolumn>
       <figure class=centered>
-        <img src="strategic_sourcing_4.jpg" />
+        <img class=listingimage src="strategic_sourcing_4.jpg" alt="Building Supplies Image" />
+      </figure>
+    </div>
+    <div class=fivecolumn>
+      <figure class=centered>
+        <img class=listingimage src="strategic_sourcing_5.jpg" alt="Kitting Capabilities Image" />
       </figure>
     </div>
   </section>
 
   <section id=separators class=columngroup>
-    <div class=fourcolumn>
+    <div class=fivecolumn>
       <hr />
     </div>
-    <div class=fourcolumn>
+    <div class=fivecolumn>
       <hr />
     </div>
-    <div class=fourcolumn>
+    <div class=fivecolumn>
       <hr />
     </div>
-    <div class=fourcolumn>
+    <div class=fivecolumn>
+      <hr />
+    </div>
+    <div class=fivecolumn>
       <hr />
     </div>
   </section>
 
   <section id=links class=columntable'>
-    <div class='fourcolumncell details'>
+    <div class='fivecolumncell details'>
       <h5>Fuses</h5>
       <ul class=linklist>
         <li><a href="http://www.bussmann.com/">Bussman</a></li>
@@ -92,21 +108,32 @@ border-right:none;
       </ul>
       <h3><a href="/sourcing-electrical">::READ MORE::</a></h3>
     </div>
-    <div class='fourcolumncell details'>
+    <div class='fivecolumncell details'>
       <h5>Prominent Professionals</h5>
       <br />
-      <p>The Strike Group has partnered with MasonPro to provide Masonry Specialty Materials and Supplies. <a href="http://www.masonpro.com">www.masonpro.com</a></p>
+      <p>The Strike Group has partnered with MasonPro to provide Masonry Specialty Materials and Supplies. <a href="http://www.masonpro.com">masonpro.com</a></p>
     </div>
-    <div class='fourcolumncell details'>
+    <div class='fivecolumncell details'>
       <h5>Excellent Service</h5>
       <br />
-      <p>The Strike Group has teamed with MANS Lumber Millwork to provide building supplies to major projects. <a href="http://www.namans.com">www.namans.com</a></p>
+      <p>The Strike Group has teamed with MANS Lumber Millwork to provide building supplies to major projects. <a href="http://www.namans.com">namans.com</a></p>
     </div>
-    <div id=details_last class='fourcolumncell details'>
+    <div class='fivecolumncell details'>
       <h5>Unlimited Opportunities</h5>
       <br />
-      <p>The Strike Group has a team arrangement with Gold Star products to supply Restaurants with quality products. <a href="http://www.goldstarproducts.com">www.goldstarproducts.com</a></p>
-      <p>The Strike Group has provide quality services for Yum Brands, MGM Casino (Detroit) & the Luxor Hotel.</p>
+      <p>The Strike Group has a team arrangement with Gold Star products to supply Restaurants with quality products. <a href="http://www.goldstarproducts.com">goldstarproducts.com</a></p>
+      <p>The Strike Group has provided quality services for:</p>
+        <ul class=fancylist>
+          <li>Yum Brands</li>
+          <li>MGM Casino (Detroit)</li>
+          <li>The Luxor Hotel</li>
+        </ul>
+    </div>
+    <div id=details_last class='fivecolumncell details'>
+      <h5>Strategic Sourcing</h5>
+      <br />
+      <p>Strike Group provides a variety of supply chain services including warehousing, inventory management, transportation, delivery, sequencing, and light assembly work.</p>
+      <h3><a href="/kitting-capabilities">::READ MORE::</a></h3>
     </div>
   </section>
 {% endblock %}

@@ -1,8 +1,8 @@
-{% extends 'base.html' %}
-{% set title='Commercial Projects' %}
+{% extends '_base.html' %}
 {% block plugin_css %}<link rel="stylesheet" type="text/css" href="/slideshow.css" />{% endblock %}
 {% set eyecandy='eyecandy4.jpg' %}
 {% block page_style %}
+<style>
 #listing {
 margin-top:20px;
 }
@@ -11,6 +11,7 @@ margin-top:20px;
 margin-top:-20px;
 overflow:hidden;
 }
+</style>
 {% endblock%}
 {% block page_content %}
 <section id=main class=columngroup>
@@ -31,6 +32,8 @@ overflow:hidden;
       <li>Rosa Parks Bus Terminal - Detroit, MI</li>
       <li>Gateway Bridge Project - Detroit, MI</li>
       <li>St Joseph Hospital</li>
+      <li><a href="/detroit-public-schools">Detroit Public Schools Project - Detroit, MI</a></li>
+      <li><a href="/gulfport-biloxi">Gulfport-Biloxi International Airport Runway</a></li>
     </ul>
   </section>
   <section id=slideshow class=twocolumn>
