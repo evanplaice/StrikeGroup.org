@@ -87,6 +87,7 @@ visibility:hidden;
 
 .columntable {
 display:table;
+width:100%;
 }
 
 .twocolumn, .threecolumn, .fourcolumn, .fivecolumn {
@@ -96,7 +97,7 @@ float:left;
 float:left;
 margin:0 auto;
 }
-.twocolumncell, .threecolumncell, .fourcolumncell, .fivecolumncell {
+.twocolumncell, .threecolumncell, .fourcolumncell, .fivecolumncell, .sixcolumncell {
 display:table-cell;
 }
 
@@ -111,6 +112,9 @@ width:25%;
 }
 .fivecolumn, 	.fivecolumncell, 	.fivecolumnimage {
 width:20%;
+}
+.sixcolumn, 	.sixcolumncell, 	.sixcolumnimage {
+width:16.6666%;
 }
 
 .twocolumnimage {
