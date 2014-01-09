@@ -25,6 +25,7 @@ static = [
   Route('/usmc',                    StaticHandler,  defaults={'_uri':'usmc'}),
   Route('/usmc-newsletter',         StaticHandler,  defaults={'_uri':'usmc-newsletter'}),
   Route('/dynmcdermott-petroleum',  StaticHandler,  defaults={'_uri':'dynmcdermott-petroleum'}),
+  Route('/shiprider-program',       StaticHandler,  defaults={'_uri':'shiprider-program'}),
   Route('/louis-stokes-medical',    StaticHandler,  defaults={'_uri':'louis-stokes-medical'}),
   Route('/seaport-e',               StaticHandler,  defaults={'_uri':'seaport-e'}),
   Route('/detroit-public-schools',  StaticHandler,  defaults={'_uri':'detroit-public-schools'}),

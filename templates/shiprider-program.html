@@ -1,0 +1,145 @@
+{% extends '_base.html' %}
+{% block page_style %}
+<style>
+#images1 {
+  margin-bottom:10px;
+}
+
+#regions {
+  margin-left:50px;
+  margin-right:50px;
+}
+
+.region_header {
+  margin-bottom:20px;
+}
+
+.region_header img {
+  border:none;
+}
+
+.region_details {
+  padding-left:30px;
+  margin-bottom:20px;
+}
+</style>
+{% endblock %}
+{% block page_content %}
+<section id="images1" class="columngroup">
+  <figure class="threecolumnimage" style="width:25%">
+    <img src='shiprider_program_1.png' alt='Photo of aircraft carrier 1' width="200" height="150" />
+  </figure>
+  <figure class="threecolumnimage" style="width:50%;">
+    <img src='shiprider_program_2.png' alt='Photo of fighter jet' width="320" height="160" />
+  </figure>
+  <figure class="threecolumnimage" style="width:25%;">
+    <img src='shiprider_program_3.png' alt='Photo of aircraft carrier 2' width="200" height="150" />
+  </figure>
+</section>
+
+<section id="info" class="description">
+  <p>Strike Group will provide Ship Riders that will support equipment installation, maintenance, modification and technical training.  Includes on-site technical support as well as escalation support for the customer’s trained personnel.  The Ship Riders will support the customer’s unique requirements and engineer custom solutions.  Some of the many key points to making this a cost effective and successful program is the quality of personnel hired and services Strike Group will provide to support the Navy customer.  Strike Groups’ trained and experienced personnel will be dispersed among customer locations on a Global basis and will be located on ships docked or at sea.</p>
+  <div id="regions">
+    <div class="columntable region_header">
+      <figure class="threecolumncell">
+        <img src="shiprider_program_4.png" />
+      </figure>
+      <div class="threecolumncell">
+        <h1>CONUS</h1>
+      </div>
+      <figure class="threecolumncell">
+        <img src="shiprider_program_5.png" />
+      </figure>
+    </div>
+    <div class="columntable region_details">
+      <div class="sixcolumncell">
+        <h5>North West</h5>
+        <ul class="fancylist">
+          <li>Bangor, WA</li>
+          <li>Bremerton, WA</li>
+          <li>Everett, WA</li>
+          <li>Puget Sound, WA</li>
+          <li>Seattle, WA</li>
+          <li>Tacoma, WA</li>
+        </ul>
+      </div>
+      <div class="sixcolumncell">
+        <h5>Pacific Central</h5>
+          <li>Ingleside, TX</li>
+          <li>Alameda, CA</li>
+          <li>Oakland, CA</li>
+          <li>San Francisco, CA</li>
+      </div>
+      <div class="sixcolumncell">
+        <h5>South West</h5>
+        <ul class="fancylist">
+          <li>Pascagoula, MS</li>
+          <li>San Diego, Ca</li>
+        </ul>
+      </div>
+      <div class="sixcolumncell">
+        <h5>North East</h5>
+          <li>Bath, ME</li>
+          <li>Bayonne, NJ</li>
+          <li>Groton, CT</li>
+          <li>Newport, RI</li>
+          <li>Philadelphia, PA</li>
+      </div>
+      <div class="sixcolumncell">
+        <h5>South East</h5>
+          <li>Charleston, SC</li>
+          <li>Jacksonville, NC</li>
+          <li>Kings Bay, GA</li>
+          <li>Key West, FL</li>
+          <li>Mayport, FL</li>
+          <li>Pensacols, FL</li>
+          <li>New Orleans, LA</li>
+          <li>Norfolk, VA</li>
+          <li>Little Creek, VA</li>
+          <li>Newport News, VA</li>
+      </div>
+      <div class="sixcolumncell">
+        <h5>Hawaii</h5>
+        <ul class="fancylist">
+          <li>Pearl Harbor, HI</li>
+        </ul>
+      </div>
+    </div>
+    <div class="columntable region_header">
+      <div>
+        <h1>OCONUS</h1>
+      </div>
+    </div>
+    <div class="columntable region_details">
+      <div class="fourcolumncell">
+        <ul class="fancylist">
+          <li>Guam</li>
+          <li>Okinawa</li>
+          <li>Sasebo, JP</li>
+          <li>Yokosuka, JP*</li>
+        </ul>
+      </div>
+      <div class="fourcolumncell">
+        <ul class="fancylist">
+          <li>Rota, Spain</li>
+          <li>Agusta Bay, Italy</li>
+          <li>La Magdalena, Italy</li>
+          <li>Naples, Italy</li>
+        </ul>
+      </div>
+      <div class="fourcolumncell">
+        <ul class="fancylist">
+          <li>Bremerhaven</li>
+          <li>W. Germany</li>
+        </ul>
+      </div>
+      <div class="fourcolumncell">
+        <ul class="fancylist">
+          <li>Guantanamo Bay</li>
+          <li>Cuba</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

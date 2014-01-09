@@ -24,8 +24,9 @@ sub = [
   { 'uri':'kitting-capabilities',   'url':'/kitting-capabilities',    'template':'kitting-capabilities.html',   'title':'Kitting Capabilities' },
   { 'uri':'usmc',                   'url':'/usmc',                    'template':'usmc.html',                   'title':'USMC Combat Camera' },
   { 'uri':'usmc-newsletter',        'url':'/usmc-newsletter',         'template':'usmc-newsletter.html',        'title':'USMC Combat Camera Newsletter' },
-  { 'uri':'dynmcdermott-petroleum', 'url':'/dynmcdermott-petroleum',  'template':'dynmcdermott-petroleum.html', 'title':'DynMcDermott Petroleum Operations' },
   { 'uri':'louis-stokes-medical',   'url':'/louis-stokes-medical',    'template':'louis-stokes-medical.html',   'title':'Louis Stokes Cleveland, VA Medical Center' },
+  { 'uri':'dynmcdermott-petroleum', 'url':'/dynmcdermott-petroleum',  'template':'dynmcdermott-petroleum.html', 'title':'DynMcDermott Petroleum Operations' },
+  { 'uri':'shiprider-program',      'url':'/shiprider-program',       'template':'shiprider-program.html',      'title':'Navy Shiprider Program' },
   { 'uri':'detroit-public-schools', 'url':'/detroit-public-schools',  'template':'detroit-public-schools.html', 'title':'Detroit Public Schools' },
   { 'uri':'gulfport-biloxi',        'url':'/gulfport-biloxi',         'template':'gulfport-biloxi.html',        'title':'Gulfport-Biloxi International Airport Runway' }
 ]
