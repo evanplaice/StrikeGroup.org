@@ -13,7 +13,6 @@ main = [
   { 'uri':'government-projects',    'url':'/government-projects',     'template':'government-projects.html',    'title':'Government Projects' },
   { 'uri':'commercial-projects',    'url':'/commercial-projects',     'template':'commercial-projects.html',    'title':'Commercial Projects' },
   { 'uri':'information-technology', 'url':'/information-technology',  'template':'information-technology.html', 'title':'Information Technology' },
-  { 'uri':'locations',              'url':'/locations',               'template':'locations.html',              'title':'Locations' },
   { 'uri':'seaport-e',              'url':'/seaport-e',               'template':'seaport-e.html',              'title':'Seaport Enhanced' },
   { 'uri':'careers',                'url':'/careers',                 'template':'careers.html',                'title':'Careers' },
   { 'uri':'contact-us',             'url':'/contact-us',              'template':'contact-us.html',             'title':'Contact Us' }

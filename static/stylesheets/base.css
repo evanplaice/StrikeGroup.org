@@ -213,7 +213,7 @@ background-color:maroon;
 #government-projects { width:171px; }
 #commercial-projects { width:171px; }
 #information-technology { width:183px; }
-#locations { width:149px; }
+#seaport-e { width:149px; }
 */
 
 #nav div {
@@ -267,11 +267,11 @@ background-position:-539px 0px;
 background-position:-539px -52px;
 }
 
-#locations img {
+#seaport-e img {
 width:84px;
 background-position:-715px 0px;
 }
-#locations img:hover {
+#seaport-e img:hover {
 background-position:-715px -52px;
 }
 
