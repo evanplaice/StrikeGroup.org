@@ -39,6 +39,10 @@ handlers:
   static_files: static/docs/newsletter/\1
   upload: static/docs/newsletter/(.*\.(pdf))
 
+- url: /partials/(.*\.(html))
+  static_files: static/partials/\1
+  upload: static/partials/(.*\.(html))
+
 - url: /(.*\.html)
   static_files: static/html/\1
   upload: static/html/(.*\.html)

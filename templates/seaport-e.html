@@ -1,0 +1,78 @@
+{% extends '_base.html' %}
+{% block plugin_js %}
+<!--<base href="seaport-e" />-->
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.4/angular.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.4/angular-route.js"></script>
+<script src="app.js"></script>
+{% endblock -%}
+{% block page_style %}
+<style>
+#left {
+  width:25%;
+	vertical-align:top;
+	padding-top:20px;
+	padding-left:30px;
+	padding-right:30px;
+	padding-bottom:20px;
+	border-radius: 15px;
+  border: 3px solid #6a6965;
+}
+
+#right {
+  width:75%;
+  vertical-align:top;
+  padding-left:80px;
+  padding-right:80px;
+}
+
+#right > h2 {
+  text-align:center;
+  margin-bottom:20px;
+}
+
+.navlink {
+	font-size:medium;
+	line-height:30px;
+	font-weight:bold;
+}
+
+.taskorder {
+  width:100%;
+  padding:10px;
+  border-radius: 5px;
+  border: 2px solid #6a6965;
+}
+
+.taskorder, .teammember, .poc {
+  margin-bottom:30px;
+}
+
+.taskorder li, .teammember li, .poc li {
+  list-style-type:none;
+  margin-left:0px;
+}
+
+.teammember span {
+  display:inline-block;
+  width:40px;
+}
+
+.underline {
+  text-decoration:underline;
+}
+</style>
+{% endblock %}
+{% block page_content %}
+<div class="columntable" data-ng-app="seaporte">
+  <div id="left" class="twocolumncell">
+  	<a href="#"><div class="navlink">Capabilities</div></a>
+  	<a href="#points-of-contact"><div class="navlink">Points of Contact</div></a>
+  	<a href="#task-orders"><div class="navlink">Task Orders</div></a>
+  	<a href="#team-information"><div class="navlink">Team Information</div></a>
+  	<a href="#quality-assurance"><div class="navlink">Quality Assurance</div></a>
+  	<a href="http://www.seaport.navy.mil/default.aspx"><div class="navlink">Seaport-e Home</div></a>
+  </div>
+  <section id="right" class="twocolumncell" contenteditable="true" data-ng-view>
+  </section>
+</div>
+{% endblock %}
