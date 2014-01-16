@@ -15,7 +15,7 @@ main = [
   { 'uri':'information-technology', 'url':'/information-technology',  'template':'information-technology.html', 'title':'Information Technology' },
   { 'uri':'seaport-e',              'url':'/seaport-e',               'template':'seaport-e.html',              'title':'Seaport Enhanced' },
   { 'uri':'careers',                'url':'/careers',                 'template':'careers.html',                'title':'Careers' },
-  { 'uri':'contact-us',             'url':'/contact-us',              'template':'contact-us.html',             'title':'Contact Us' }
+  { 'uri':'contact-us',             'url':'/contact-us',              'template':'contact-us.html',             'title':'Contact Us' },
 ]
 
 sub = [
