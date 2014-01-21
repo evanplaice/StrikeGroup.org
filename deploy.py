@@ -13,7 +13,7 @@ import sys
 import urllib2
 from app.urls import masterlist
 
-port = '8083'
+port = '8080'
 local_folder = os.getcwd() + os.sep + 'static' + os.sep + 'html' + os.sep
 print 'Outputting to: ' + local_folder
 
